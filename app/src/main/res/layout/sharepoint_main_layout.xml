@@ -2,13 +2,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@android:style/Theme.WithActionBar">
+    android:theme="@android:style/Theme.WithActionBar"
+    android:padding="10dp"
+    android:background="@color/abc_search_url_text_normal"
+    android:focusableInTouchMode="true">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/filter_text"
+        android:hint="@string/enter_keyword_hint"
+        android:layout_alignParentTop="true"
+        android:maxLines="1"
+        />
 
     <ListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"></ListView>
+        android:layout_below="@+id/filter_text"
+        android:layout_marginTop="5dp"
+        android:background="@color/primary_material_light"></ListView>
 
     <TextView
         android:layout_width="wrap_content"

@@ -2,26 +2,31 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="70dp">
+    android:padding="15dp"
+    android:background="@color/abc_search_url_text_normal">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/titile_text"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="15dp"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/detail_text"
-        android:layout_alignStart="@+id/detail_text" />
+        android:layout_alignStart="@+id/detail_text"
+        android:background="@color/background_floating_material_light"
+        android:hint="@string/title"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/detail_text"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/titile_text"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@color/background_floating_material_light"
+        android:hint="@string/detail"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,7 +35,9 @@
         android:id="@+id/owner_text"
         android:layout_below="@+id/detail_text"
         android:layout_alignRight="@+id/detail_text"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:background="@color/background_floating_material_light"
+        android:hint="@string/owner"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -46,7 +53,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/comment_list"
         android:layout_below="@+id/add_comment_button"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+        android:background="@color/primary_material_light"/>
 
 </RelativeLayout>
 <!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/layout/sharepoint_detail_layout.xml -->

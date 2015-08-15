@@ -322,6 +322,7 @@
     <!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="delete_sharepoint">Delete Sharepoint</string>
+    <string name="detail">Detail</string>
     <string name="dialog_add_sharepoint_detail_hint">Enther the detail</string>
     <string name="dialog_add_sharepoint_title">Add a Sharepoint</string>
     <string name="dialog_sharepoint_title_hint">Enter the title</string>
@@ -330,6 +331,7 @@
     <string name="email">Email</string>
     <string name="email_example_text">example@rose-hulman.edu</string>
     <string name="email_text">Email</string>
+    <string name="enter_keyword_hint">enter the keywords</string>
     <string name="hello_world">Test Changes</string>
     <string name="loading_sharepoints">Loading Sharepoints...Please wait</string>
     <string name="login_text">Login</string>
@@ -347,6 +349,7 @@
     <string name="mr_user_route_category_name">Devices</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="owner">Owner</string>
     <string name="password_example_text">******</string>
     <string name="password_text">Veri. Code</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
@@ -358,6 +361,7 @@
     <string name="store_picture_title">Save image</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="title">Title</string>
     <string name="verification_text">Get Verification Code</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_strings.xml -->
     <eat-comment/>

@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    android:divider="@drawable/empty_width_divider"
+    android:showDividers="middle">
 
-    <ImageButton
-        android:id="@+id/add_sharepoint_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:src="@android:drawable/ic_menu_add"
-        android:background="@drawable/button_shape" />
+        <ImageButton
+            android:id="@+id/add_sharepoint_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:src="@drawable/ic_menu_btn_add"
+            />
 
-    <ImageButton
-        android:id="@+id/sync_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:src="@android:drawable/ic_popup_sync"
-        android:background="@drawable/button_shape" />
+        <ImageButton
+            android:id="@+id/sync_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:src="@drawable/ic_menu_refresh"
+            android:layout_weight="1" />
 
-    <ImageButton
-        android:id="@+id/show_self_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:src="@android:drawable/ic_dialog_info"
-        android:background="@drawable/button_shape" />
+        <ImageButton
+            android:id="@+id/change_profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:src="@drawable/ic_menu_invite"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/show_self_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:src="@drawable/ic_menu_home"
 
+            android:layout_weight="1"/>
 
-</RelativeLayout><!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/layout/sharepoint_main_actionbar.xml -->
+</LinearLayout><!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/layout/sharepoint_main_actionbar.xml -->

@@ -19,4 +19,8 @@
     <string name="loading_sharepoints">Loading Sharepoints...Please wait</string>
     <string name="comment_enter_message_hint">Enter your message</string>
     <string name="add_comment">Add Comment</string>
+    <string name="enter_keyword_hint">enter the keywords</string>
+    <string name="title">Title</string>
+    <string name="detail">Detail</string>
+    <string name="owner">Owner</string>
 </resources>

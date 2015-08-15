@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,7 +60,24 @@ public class SharePointListActivity extends ListActivity implements View.OnClick
         actionBar.getCustomView().findViewById(R.id.sync_button).setOnClickListener(this);
         actionBar.getCustomView().findViewById(R.id.add_sharepoint_button).setOnClickListener(this);
         actionBar.getCustomView().findViewById(R.id.show_self_button).setOnClickListener(this);
+        actionBar.getCustomView().findViewById(R.id.change_profile_button).setOnClickListener(this);
+        ((EditText)findViewById(R.id.filter_text)).addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                Log.d(SV, "Search value set: " + s.toString());
+                if (getListAdapter() != null) {
+                    ((SharePointDataAdapter) getListAdapter()).getFilter().filter(s.toString());
+                }
+            }
+        });
         mCredential = GoogleAccountCredential.usingAudience(this,
                 "server:client_id:702117983306-uo985e1nandi1slhh1gt8op69egjme34.apps.googleusercontent.com");
         mSettings = getSharedPreferences(SHARED_PREFERENCES_NAME, 0);
@@ -100,6 +119,9 @@ public class SharePointListActivity extends ListActivity implements View.OnClick
                 Intent intent = new Intent(this, SelfSharepointListActivity.class);
                 //should put the user information
                 startActivity(intent);
+                break;
+            case R.id.change_profile_button:
+                chooseAccount();
                 break;
         }
     }
