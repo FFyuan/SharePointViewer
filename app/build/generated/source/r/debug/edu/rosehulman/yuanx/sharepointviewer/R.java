@@ -2003,11 +2003,12 @@ containing a value of this type.
         public static final int mr_ic_play_light=0x7f020083;
         public static final int mr_ic_settings_dark=0x7f020084;
         public static final int mr_ic_settings_light=0x7f020085;
-        public static final int notification_template_icon_bg=0x7f02008a;
+        public static final int notification_template_icon_bg=0x7f02008b;
         public static final int powered_by_google_dark=0x7f020086;
         public static final int powered_by_google_light=0x7f020087;
-        public static final int s=0x7f020088;
-        public static final int text_detail_shape=0x7f020089;
+        public static final int r=0x7f020088;
+        public static final int s=0x7f020089;
+        public static final int text_detail_shape=0x7f02008a;
     }
     public static final class id {
         public static final int action0=0x7f0d008c;

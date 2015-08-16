@@ -559,11 +559,12 @@ int drawable mr_ic_play_dark 0x7f020082
 int drawable mr_ic_play_light 0x7f020083
 int drawable mr_ic_settings_dark 0x7f020084
 int drawable mr_ic_settings_light 0x7f020085
-int drawable notification_template_icon_bg 0x7f02008a
+int drawable notification_template_icon_bg 0x7f02008b
 int drawable powered_by_google_dark 0x7f020086
 int drawable powered_by_google_light 0x7f020087
-int drawable s 0x7f020088
-int drawable text_detail_shape 0x7f020089
+int drawable r 0x7f020088
+int drawable s 0x7f020089
+int drawable text_detail_shape 0x7f02008a
 int id action0 0x7f0d008c
 int id action_bar 0x7f0d0057
 int id action_bar_activity_content 0x7f0d0000
