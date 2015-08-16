@@ -1,6 +1,7 @@
 package edu.rosehulman.yuanx.sharepointviewer;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -18,11 +19,12 @@ import java.util.List;
  */
 public class SharePointDataAdapter extends ArrayAdapter<Sharepoint> implements Filterable{
 
-    private List<Sharepoint> origin;
+    private ArrayList<Sharepoint> mList;
+    private Filter filter;
 
     public SharePointDataAdapter(Context context, List<Sharepoint> objects) {
         super(context, android.R.layout.simple_expandable_list_item_2, android.R.id.text1, objects);
-        origin = objects;
+        mList = copySharepoints(objects);
     }
 
     @Override
@@ -39,34 +41,54 @@ public class SharePointDataAdapter extends ArrayAdapter<Sharepoint> implements F
 
     @Override
     public Filter getFilter() {
-        return new Filter() {
-            @Override
-            protected FilterResults performFiltering(CharSequence constraint) {
-                FilterResults results = new FilterResults();
-                ArrayList<Sharepoint> filteredArray = new ArrayList<>();
-                constraint = constraint.toString().toLowerCase();
-                for(int i=0;i < origin.size(); i++){
-                    String title = origin.get(i).getTitle();
-                    String detail = origin.get(i).getDetail();
-                    if(title.toLowerCase().contains(constraint.toString()) || detail.toLowerCase().contains(constraint.toString())){
-                        filteredArray.add(origin.get(i));
-                    }
-                }
-                results.count = filteredArray.size();
-                results.values = filteredArray;
-                return results;
-            }
+        if (filter == null){
+            filter = new MyFilter();
+        }
+        return filter;
+    }
 
-            @Override
-            protected void publishResults(CharSequence constraint, FilterResults results) {
-                clear();
-                if(constraint == null || constraint == ""){
-                    addAll(origin);
-                }else {
+    class MyFilter extends  Filter {
+        @Override
+        protected android.widget.Filter.FilterResults performFiltering(CharSequence constraint) {
+            android.widget.Filter.FilterResults results = new android.widget.Filter.FilterResults();
+            ArrayList<Sharepoint> filteredArray = new ArrayList<>();
+            constraint = constraint.toString().toLowerCase();
+            List<Sharepoint> temp = mList;
+            for(int i=0;i < temp.size(); i++){
+                String title = temp.get(i).getTitle();
+                String detail = temp.get(i).getDetail();
+                if(title.toLowerCase().contains(constraint.toString()) || detail.toLowerCase().contains(constraint.toString())){
+                    filteredArray.add(temp.get(i));
+                }
+            }
+            results.count = filteredArray.size();
+            results.values = filteredArray;
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, android.widget.Filter.FilterResults
+        results) {
+            clear();
+
+            if(constraint == null || constraint == ""){
+                addAll(mList);
+            }else {
+                if(results.values == null){
+                    Log.d(SharePointListActivity.SV, "origin.count = + " + mList.size());
+                } else {
                     addAll((List<Sharepoint>) results.values);
                 }
-                notifyDataSetChanged();
             }
-        };
+            notifyDataSetChanged();
+        }
+    };
+
+    private ArrayList<Sharepoint> copySharepoints(List<Sharepoint> sharepoints){
+        ArrayList<Sharepoint> newSharepoints = new ArrayList<>();
+        for(Sharepoint sp : sharepoints){
+            newSharepoints.add(sp);
+        }
+        return newSharepoints;
     }
 }

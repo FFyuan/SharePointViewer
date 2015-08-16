@@ -23,4 +23,6 @@
     <string name="title">Title</string>
     <string name="detail">Detail</string>
     <string name="owner">Owner</string>
+    <string name="user">user</string>
+    <string name="message_hint">message</string>
 </resources>

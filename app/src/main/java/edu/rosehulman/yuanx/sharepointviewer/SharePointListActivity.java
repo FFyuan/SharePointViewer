@@ -68,14 +68,15 @@ public class SharePointListActivity extends ListActivity implements View.OnClick
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
                 Log.d(SV, "Search value set: " + s.toString());
                 if (getListAdapter() != null) {
                     ((SharePointDataAdapter) getListAdapter()).getFilter().filter(s.toString());
                 }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
             }
         });
         mCredential = GoogleAccountCredential.usingAudience(this,

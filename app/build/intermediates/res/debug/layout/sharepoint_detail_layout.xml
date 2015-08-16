@@ -2,59 +2,77 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
-    android:background="@color/abc_search_url_text_normal">
+    android:background="@color/abc_search_url_text_normal"
+    android:padding="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/titile_text"
-        android:layout_marginTop="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/detail_text"
-        android:layout_alignStart="@+id/detail_text"
-        android:background="@color/background_floating_material_light"
-        android:hint="@string/title"/>
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/detail_text"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/titile_text"
-        android:layout_centerHorizontal="true"
-        android:background="@color/background_floating_material_light"
-        android:hint="@string/detail"/>
+        android:layout_height="match_parent"
+        android:background="@color/button_material_light"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/owner_text"
-        android:layout_below="@+id/detail_text"
-        android:layout_alignRight="@+id/detail_text"
-        android:layout_marginTop="10dp"
-        android:background="@color/background_floating_material_light"
-        android:hint="@string/owner"/>
+        <TextView
+            android:id="@+id/titile_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/detail_text"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/detail_text"
+            android:layout_marginTop="15dp"
+            android:background="#00000000"
+            android:hint="@string/title"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/owner_text"
-        android:layout_alignRight="@+id/owner_text"
-        android:layout_marginTop="10dp"
-        android:text="@string/add_comment"
-        android:textSize="10sp"
-        android:id="@+id/add_comment_button" />
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/comment_list"
-        android:layout_below="@+id/add_comment_button"
-        android:layout_marginTop="30dp"
-        android:background="@color/primary_material_light"/>
+        <TextView
+            android:id="@+id/detail_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:layout_below="@+id/titile_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_detail_shape"
+            android:hint="@string/detail"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/owner_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/detail_text"
+            android:layout_below="@+id/detail_text"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:hint="@string/owner"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/add_comment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/owner_text"
+            android:layout_below="@+id/owner_text"
+            android:layout_marginTop="10dp"
+            android:text="@string/add_comment"
+            android:textSize="10sp"
+            android:background="@drawable/add_comment_shape"/>
+
+        <ListView
+            android:id="@+id/comment_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_comment_button"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/text_detail_shape" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
 <!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/layout/sharepoint_detail_layout.xml -->

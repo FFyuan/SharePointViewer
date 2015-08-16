@@ -89,6 +89,9 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="transparent">#00000000</color>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_colors.xml -->
     <eat-comment/>
     <color name="wallet_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
@@ -335,6 +338,7 @@
     <string name="hello_world">Test Changes</string>
     <string name="loading_sharepoints">Loading Sharepoints...Please wait</string>
     <string name="login_text">Login</string>
+    <string name="message_hint">message</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="mr_media_route_button_content_description">Cast</string>
@@ -362,6 +366,7 @@
     <!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title">Title</string>
+    <string name="user">user</string>
     <string name="verification_text">Get Verification Code</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_strings.xml -->
     <eat-comment/>
