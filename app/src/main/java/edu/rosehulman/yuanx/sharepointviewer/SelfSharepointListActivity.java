@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.appspot.yuanx_sharepoint_viewer.sharepointviewer.Sharepointviewer;
@@ -32,14 +33,17 @@ import java.util.ArrayList;
  */
 public class SelfSharepointListActivity extends ListActivity {
 
+    public static String KEY_USERNAME = "KEY_USERNAME";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
-        setContentView(R.layout.sharepoint_main_layout);
+        //getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+        setContentView(R.layout.sharepoint_self_layout);
         //setup action bar
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-
+        //getActionBar().setDisplayHomeAsUpEnabled(true);
+        String username = (getIntent().getStringExtra(KEY_USERNAME));
+        ((TextView) findViewById(R.id.self_title)).setText(username + "'s Sharepoints");
         updateSelfSharepoints();
     }
 

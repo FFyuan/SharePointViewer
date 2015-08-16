@@ -356,6 +356,7 @@
     <string name="owner">Owner</string>
     <string name="password_example_text">******</string>
     <string name="password_text">Veri. Code</string>
+    <string name="self_title_hint">Username\'s Sharepoints</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
@@ -366,6 +367,8 @@
     <!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title">Title</string>
+    <string name="title_activity_daily_menu">DailyMenuActivity</string>
+    <string name="title_activity_main_tab">MainTabActivity</string>
     <string name="user">user</string>
     <string name="verification_text">Get Verification Code</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_strings.xml -->
@@ -379,7 +382,7 @@
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
     <!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
     </style>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->

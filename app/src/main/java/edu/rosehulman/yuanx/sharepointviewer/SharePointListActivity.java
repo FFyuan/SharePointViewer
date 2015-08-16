@@ -51,16 +51,12 @@ public class SharePointListActivity extends ListActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.sharepoint_main_layout);
         //configure the action bar and show it
-        ActionBar actionBar = getActionBar();
-        actionBar.setCustomView(R.layout.sharepoint_main_actionbar);
-        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        actionBar.getCustomView().findViewById(R.id.sync_button).setOnClickListener(this);
-        actionBar.getCustomView().findViewById(R.id.add_sharepoint_button).setOnClickListener(this);
-        actionBar.getCustomView().findViewById(R.id.show_self_button).setOnClickListener(this);
-        actionBar.getCustomView().findViewById(R.id.change_profile_button).setOnClickListener(this);
+        findViewById(R.id.sync_button).setOnClickListener(this);
+        findViewById(R.id.add_sharepoint_button).setOnClickListener(this);
+        findViewById(R.id.show_self_button).setOnClickListener(this);
+        findViewById(R.id.change_profile_button).setOnClickListener(this);
         ((EditText)findViewById(R.id.filter_text)).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -118,7 +114,7 @@ public class SharePointListActivity extends ListActivity implements View.OnClick
                 break;
             case R.id.show_self_button:
                 Intent intent = new Intent(this, SelfSharepointListActivity.class);
-                //should put the user information
+                intent.putExtra(SelfSharepointListActivity.KEY_USERNAME, mCredential.getSelectedAccount().name);
                 startActivity(intent);
                 break;
             case R.id.change_profile_button:

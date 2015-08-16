@@ -25,4 +25,7 @@
     <string name="owner">Owner</string>
     <string name="user">user</string>
     <string name="message_hint">message</string>
+    <string name="title_activity_daily_menu">DailyMenuActivity</string>
+    <string name="title_activity_main_tab">MainTabActivity</string>
+    <string name="self_title_hint">Username\'s Sharepoints</string>
 </resources>

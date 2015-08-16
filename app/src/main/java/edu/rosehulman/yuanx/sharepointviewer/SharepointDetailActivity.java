@@ -44,7 +44,7 @@ public class SharepointDetailActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sharepoint_detail_layout);
         //setup the action bar
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        //getActionBar().setDisplayHomeAsUpEnabled(true);
         Intent data = getIntent();
         final String ownerKey = data.getStringExtra(KEY_USER);
         final String ownerName = data.getStringExtra(KEY_NAME);

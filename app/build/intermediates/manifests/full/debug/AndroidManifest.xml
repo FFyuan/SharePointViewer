@@ -27,15 +27,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Holo.Light" >
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
         <activity
             android:name="edu.rosehulman.yuanx.sharepointviewer.SharePointListActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="edu.rosehulman.yuanx.sharepointviewer.SelfSharepointListActivity"
@@ -45,6 +40,19 @@
             android:name="edu.rosehulman.yuanx.sharepointviewer.SharepointDetailActivity"
             android:label="Details"
             android:parentActivityName="edu.rosehulman.yuanx.sharepointviewer.SharePointListActivity" />
+        <activity
+            android:name="edu.rosehulman.yuanx.sharepointviewer.DailyMenuActivity"
+            android:label="@string/title_activity_daily_menu" >
+        </activity>
+        <activity
+            android:name="edu.rosehulman.yuanx.sharepointviewer.MainTabActivity"
+            android:label="@string/title_activity_main_tab" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
