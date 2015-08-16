@@ -42,7 +42,7 @@ public class SharepointDetailActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sharepoint_detail_layout);
+        setContentView(R.layout.activity_sharepoint_detail);
         //setup the action bar
         //getActionBar().setDisplayHomeAsUpEnabled(true);
         Intent data = getIntent();

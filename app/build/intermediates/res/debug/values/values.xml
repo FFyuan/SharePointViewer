@@ -30,6 +30,11 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="background">#7fa87f</color>
+    <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="background_floating_material_dark">#ff424242</color>
     <color name="background_floating_material_light">#ffeeeeee</color>
     <color name="background_material_dark">#ff303030</color>
@@ -336,7 +341,8 @@
     <string name="email_text">Email</string>
     <string name="enter_keyword_hint">enter the keywords</string>
     <string name="hello_world">Test Changes</string>
-    <string name="loading_sharepoints">Loading Sharepoints...Please wait</string>
+    <string name="loading_menu">Loading the Menu…plz Wait</string>
+    <string name="loading_sharepoints">Loading Sharepoints…Please wait</string>
     <string name="login_text">Login</string>
     <string name="message_hint">message</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
@@ -356,6 +362,7 @@
     <string name="owner">Owner</string>
     <string name="password_example_text">******</string>
     <string name="password_text">Veri. Code</string>
+    <string name="period_hint">Period</string>
     <string name="self_title_hint">Username\'s Sharepoints</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
@@ -369,6 +376,7 @@
     <string name="title">Title</string>
     <string name="title_activity_daily_menu">DailyMenuActivity</string>
     <string name="title_activity_main_tab">MainTabActivity</string>
+    <string name="title_activity_menu_list">MenuList</string>
     <string name="user">user</string>
     <string name="verification_text">Get Verification Code</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_strings.xml -->

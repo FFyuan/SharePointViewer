@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/abc_search_url_text_normal"
+    android:background="@color/background"
     android:padding="10dp">
 
     <RelativeLayout
@@ -21,7 +21,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/detail_text"
             android:layout_marginTop="15dp"
-            android:background="#00000000"
+            android:background="@color/transparent"
             android:hint="@string/title"
             android:textSize="30sp"
             android:textStyle="bold"/>
@@ -75,4 +75,4 @@
     </RelativeLayout>
 
 </RelativeLayout>
-<!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/layout/sharepoint_detail_layout.xml -->
+<!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/layout/activity_sharepoint_detail.xml -->

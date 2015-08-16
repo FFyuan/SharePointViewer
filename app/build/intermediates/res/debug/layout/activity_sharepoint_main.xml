@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/abc_search_url_text_normal"
+    android:background="@color/background"
     android:focusableInTouchMode="true"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
@@ -89,4 +89,4 @@
         android:text="@string/loading_sharepoints"
         android:textSize="25sp" />
 </RelativeLayout>
-<!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/layout/sharepoint_main_layout.xml -->
+<!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/layout/activity_sharepoint_main.xml -->

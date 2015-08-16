@@ -1,7 +1,6 @@
 package edu.rosehulman.yuanx.sharepointviewer;
 
 import android.accounts.AccountManager;
-import android.app.ActionBar;
 import android.app.DialogFragment;
 import android.app.ListActivity;
 import android.content.Intent;
@@ -14,7 +13,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -51,7 +49,7 @@ public class SharePointListActivity extends ListActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sharepoint_main_layout);
+        setContentView(R.layout.activity_sharepoint_main);
         //configure the action bar and show it
         findViewById(R.id.sync_button).setOnClickListener(this);
         findViewById(R.id.add_sharepoint_button).setOnClickListener(this);

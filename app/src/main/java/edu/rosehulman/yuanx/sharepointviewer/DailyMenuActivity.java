@@ -1,38 +1,43 @@
 package edu.rosehulman.yuanx.sharepointviewer;
 
-import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
+import android.app.TabActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.TabHost;
 
-public class DailyMenuActivity extends Activity {
+public class DailyMenuActivity extends TabActivity {
 
+    TabHost tabHost;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daily_menu);
-    }
+        tabHost = getTabHost();
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_daily_menu, menu);
-        return true;
-    }
+        // Set TabChangeListener called when tab changed
+        //tabHost.setOnTabChangedListener(this);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        TabHost.TabSpec spec;
+        Intent intent;
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        /************* Breakfast ************/
+        intent = new Intent().setClass(this, MenuListActivity.class);
+        intent.putExtra(MenuListActivity.KEY_PERIOD, "Breakfast");
+        spec = tabHost.newTabSpec("Breakfast").setIndicator("Breakfast")
+                .setContent(intent);
+        tabHost.addTab(spec);
+        /************* Lunch ************/
+        intent = new Intent().setClass(this, MenuListActivity.class);
+        intent.putExtra(MenuListActivity.KEY_PERIOD, "Lunch");
+        spec = tabHost.newTabSpec("Lunch").setIndicator("Lunch")
+                .setContent(intent);
+        tabHost.addTab(spec);
+        /************* Dinner ************/
+        intent = new Intent().setClass(this, MenuListActivity.class);
+        intent.putExtra(MenuListActivity.KEY_PERIOD, "Dinner");
+        spec = tabHost.newTabSpec("Dinner").setIndicator("Dinner")
+                .setContent(intent);
+        tabHost.addTab(spec);
 
-        return super.onOptionsItemSelected(item);
     }
 }

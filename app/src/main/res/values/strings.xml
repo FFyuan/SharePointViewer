@@ -16,7 +16,7 @@
     <string name="delete_sharepoint">Delete Sharepoint</string>
     <string name="edit_sharepoint">Edit Sharepoint</string>
     <string name="edit_sharepoint_title">Edit Sharepoint</string>
-    <string name="loading_sharepoints">Loading Sharepoints...Please wait</string>
+    <string name="loading_sharepoints">Loading Sharepoints…Please wait</string>
     <string name="comment_enter_message_hint">Enter your message</string>
     <string name="add_comment">Add Comment</string>
     <string name="enter_keyword_hint">enter the keywords</string>
@@ -28,4 +28,7 @@
     <string name="title_activity_daily_menu">DailyMenuActivity</string>
     <string name="title_activity_main_tab">MainTabActivity</string>
     <string name="self_title_hint">Username\'s Sharepoints</string>
+    <string name="title_activity_menu_list">MenuList</string>
+    <string name="period_hint">Period</string>
+    <string name="loading_menu">Loading the Menu…plz Wait</string>
 </resources>

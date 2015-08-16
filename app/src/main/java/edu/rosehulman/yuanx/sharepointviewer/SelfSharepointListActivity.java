@@ -12,7 +12,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,7 +38,7 @@ public class SelfSharepointListActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
-        setContentView(R.layout.sharepoint_self_layout);
+        setContentView(R.layout.activity_sharepoint_self);
         //setup action bar
         //getActionBar().setDisplayHomeAsUpEnabled(true);
         String username = (getIntent().getStringExtra(KEY_USERNAME));

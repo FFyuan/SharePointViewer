@@ -176,6 +176,12 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:36:17
 	android:name
 		ADDED from AndroidManifest.xml:36:27
+activity#edu.rosehulman.yuanx.sharepointviewer.MenuListActivity
+ADDED from AndroidManifest.xml:39:9
+	android:label
+		ADDED from AndroidManifest.xml:41:13
+	android:name
+		ADDED from AndroidManifest.xml:40:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5
