@@ -12,20 +12,20 @@ import java.util.List;
 
 /**
  * Created by yuanx on 8/16/2015.
+ * The adapter of the menu list, implementing the header feature
  */
 public class MenuListAdapter extends ArrayAdapter<MenuItems> {
 
-    private Context context;
     private ArrayList<MenuItems> items;
     private LayoutInflater inflater;
 
     public MenuListAdapter(Context context, ArrayList<MenuItems> objects) {
         super(context, 0, objects);
-        this.context = context;
         this.items = objects;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
+    //use the isHeader flag to decide which kind of view to inflate
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;

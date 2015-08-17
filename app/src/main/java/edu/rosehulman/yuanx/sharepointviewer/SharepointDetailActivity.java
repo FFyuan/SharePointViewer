@@ -28,6 +28,7 @@ import java.util.ArrayList;
 
 /**
  * Created by yuanx on 7/22/2015.
+ * the detail view activity
  */
 public class SharepointDetailActivity extends Activity {
     public static String KEY_ENTITY = "KEY_ENTITY";
@@ -43,8 +44,7 @@ public class SharepointDetailActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sharepoint_detail);
-        //setup the action bar
-        //getActionBar().setDisplayHomeAsUpEnabled(true);
+        //get intent and extras
         Intent data = getIntent();
         final String ownerKey = data.getStringExtra(KEY_USER);
         final String ownerName = data.getStringExtra(KEY_NAME);
@@ -82,6 +82,7 @@ public class SharepointDetailActivity extends Activity {
         new QueryForComments().execute(mSharepointKey);
     }
 
+    //the helper method to bring up the dialog of adding a dialog
     private void addDialog(final String userkey, final String userName) {
         DialogFragment df = new DialogFragment() {
             @Override
@@ -119,6 +120,7 @@ public class SharepointDetailActivity extends Activity {
         df.show(getFragmentManager(), "");
     }
 
+    //brings up the deletion confirm dialog
     private void deleteDialog(final String entityKey) {
         DialogFragment df = new DialogFragment() {
             @Override
@@ -144,6 +146,7 @@ public class SharepointDetailActivity extends Activity {
         df.show(getFragmentManager(), "");
     }
 
+    //API request class
     class QueryForComments extends AsyncTask<String, Void, CommentCollection> {
 
         @Override

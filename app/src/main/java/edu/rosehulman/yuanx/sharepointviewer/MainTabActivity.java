@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TabHost;
-
+//the activity load on launch, with two tabs inside
 public class MainTabActivity extends TabActivity {
 
     TabHost tabHost;
@@ -16,9 +16,6 @@ public class MainTabActivity extends TabActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_tab);
         tabHost = getTabHost();
-
-        // Set TabChangeListener called when tab changed
-        //tabHost.setOnTabChangedListener(this);
 
         TabHost.TabSpec spec;
         Intent intent;

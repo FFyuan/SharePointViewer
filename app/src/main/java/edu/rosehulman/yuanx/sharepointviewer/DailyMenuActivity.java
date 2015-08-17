@@ -4,7 +4,7 @@ import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TabHost;
-
+//the Daily Menu Activity
 public class DailyMenuActivity extends TabActivity {
 
     TabHost tabHost;
@@ -14,12 +14,9 @@ public class DailyMenuActivity extends TabActivity {
         setContentView(R.layout.activity_daily_menu);
         tabHost = getTabHost();
 
-        // Set TabChangeListener called when tab changed
-        //tabHost.setOnTabChangedListener(this);
-
         TabHost.TabSpec spec;
         Intent intent;
-
+        //Adding three tabs representing three periods
         /************* Breakfast ************/
         intent = new Intent().setClass(this, MenuListActivity.class);
         intent.putExtra(MenuListActivity.KEY_PERIOD, "Breakfast");

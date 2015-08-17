@@ -2003,12 +2003,11 @@ containing a value of this type.
         public static final int mr_ic_play_light=0x7f020083;
         public static final int mr_ic_settings_dark=0x7f020084;
         public static final int mr_ic_settings_light=0x7f020085;
-        public static final int notification_template_icon_bg=0x7f02008b;
+        public static final int notification_template_icon_bg=0x7f02008a;
         public static final int powered_by_google_dark=0x7f020086;
         public static final int powered_by_google_light=0x7f020087;
         public static final int r=0x7f020088;
-        public static final int s=0x7f020089;
-        public static final int text_detail_shape=0x7f02008a;
+        public static final int text_detail_shape=0x7f020089;
     }
     public static final class id {
         public static final int action0=0x7f0d008c;
@@ -2026,7 +2025,6 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d0054;
         public static final int action_mode_bar_stub=0x7f0d0053;
         public static final int action_mode_close_button=0x7f0d003c;
-        public static final int action_settings=0x7f0d0099;
         public static final int activity_chooser_view_content=0x7f0d003d;
         public static final int add_comment_button=0x7f0d006a;
         public static final int add_sharepoint_button=0x7f0d006d;
@@ -2098,8 +2096,8 @@ containing a value of this type.
         public static final int media_actions=0x7f0d008f;
         public static final int media_route_control_frame=0x7f0d0083;
         public static final int media_route_list=0x7f0d007f;
-        public static final int menu_item_list_view_delete=0x7f0d009a;
-        public static final int menu_item_list_view_edit=0x7f0d009b;
+        public static final int menu_item_list_view_delete=0x7f0d0099;
+        public static final int menu_item_list_view_edit=0x7f0d009a;
         public static final int menulist_category=0x7f0d007d;
         public static final int menulist_dish=0x7f0d007e;
         public static final int middle=0x7f0d0017;
@@ -2230,11 +2228,7 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f040032;
     }
     public static final class menu {
-        public static final int menu_daily_menu=0x7f0e0000;
-        public static final int menu_login_page=0x7f0e0001;
-        public static final int menu_main_tab=0x7f0e0002;
-        public static final int menu_menu_list=0x7f0e0003;
-        public static final int selfsharepointview_context_menu=0x7f0e0004;
+        public static final int selfsharepointview_context_menu=0x7f0e0000;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -2312,15 +2306,10 @@ containing a value of this type.
         public static final int dialog_sharepoint_title_hint=0x7f07004d;
         public static final int edit_sharepoint=0x7f07004e;
         public static final int edit_sharepoint_title=0x7f07004f;
-        public static final int email=0x7f070050;
-        public static final int email_example_text=0x7f070051;
-        public static final int email_text=0x7f070052;
-        public static final int enter_keyword_hint=0x7f070053;
-        public static final int hello_world=0x7f070054;
-        public static final int loading_menu=0x7f070055;
-        public static final int loading_sharepoints=0x7f070056;
-        public static final int login_text=0x7f070057;
-        public static final int message_hint=0x7f070058;
+        public static final int enter_keyword_hint=0x7f070050;
+        public static final int loading_menu=0x7f070051;
+        public static final int loading_sharepoints=0x7f070052;
+        public static final int message_hint=0x7f070053;
         public static final int mr_media_route_button_content_description=0x7f07002d;
         public static final int mr_media_route_chooser_searching=0x7f07002e;
         public static final int mr_media_route_chooser_title=0x7f07002f;
@@ -2331,20 +2320,18 @@ containing a value of this type.
         public static final int mr_media_route_controller_stop=0x7f070034;
         public static final int mr_system_route_name=0x7f070035;
         public static final int mr_user_route_category_name=0x7f070036;
-        public static final int owner=0x7f070059;
-        public static final int password_example_text=0x7f07005a;
-        public static final int password_text=0x7f07005b;
-        public static final int period_hint=0x7f07005c;
-        public static final int self_title_hint=0x7f07005d;
-        public static final int status_bar_notification_info_overflow=0x7f07005e;
-        public static final int store_picture_message=0x7f07005f;
-        public static final int store_picture_title=0x7f070060;
-        public static final int title=0x7f070061;
-        public static final int title_activity_daily_menu=0x7f070062;
-        public static final int title_activity_main_tab=0x7f070063;
-        public static final int title_activity_menu_list=0x7f070064;
-        public static final int user=0x7f070065;
-        public static final int verification_text=0x7f070066;
+        public static final int owner=0x7f070054;
+        public static final int period_hint=0x7f070055;
+        public static final int self_title_hint=0x7f070056;
+        public static final int status_bar_notification_info_overflow=0x7f070057;
+        public static final int store_picture_message=0x7f070058;
+        public static final int store_picture_title=0x7f070059;
+        public static final int title=0x7f07005a;
+        public static final int title_activity_daily_menu=0x7f07005b;
+        public static final int title_activity_main_tab=0x7f07005c;
+        public static final int title_activity_menu_list=0x7f07005d;
+        public static final int title_sharepoint_list_activity=0x7f07005e;
+        public static final int user=0x7f07005f;
         public static final int wallet_buy_button_place_holder=0x7f070037;
     }
     public static final class style {

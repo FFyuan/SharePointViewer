@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * Created by yuanx on 7/27/2015.
+ * The comment list adapter
  */
 public class CommnetListAdapter extends BaseAdapter {
 

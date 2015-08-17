@@ -336,14 +336,9 @@
     <string name="dialog_sharepoint_title_hint">Enter the title</string>
     <string name="edit_sharepoint">Edit Sharepoint</string>
     <string name="edit_sharepoint_title">Edit Sharepoint</string>
-    <string name="email">Email</string>
-    <string name="email_example_text">example@rose-hulman.edu</string>
-    <string name="email_text">Email</string>
     <string name="enter_keyword_hint">enter the keywords</string>
-    <string name="hello_world">Test Changes</string>
     <string name="loading_menu">Loading the Menu…plz Wait</string>
     <string name="loading_sharepoints">Loading Sharepoints…Please wait</string>
-    <string name="login_text">Login</string>
     <string name="message_hint">message</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
@@ -360,8 +355,6 @@
     <!-- From: file:/E:/Github/SharePointViewer/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="owner">Owner</string>
-    <string name="password_example_text">******</string>
-    <string name="password_text">Veri. Code</string>
     <string name="period_hint">Period</string>
     <string name="self_title_hint">Username\'s Sharepoints</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
@@ -377,8 +370,8 @@
     <string name="title_activity_daily_menu">DailyMenuActivity</string>
     <string name="title_activity_main_tab">MainTabActivity</string>
     <string name="title_activity_menu_list">MenuList</string>
+    <string name="title_sharepoint_list_activity">Public Sharepoint</string>
     <string name="user">user</string>
-    <string name="verification_text">Get Verification Code</string>
     <!-- From: file:/E:/Github/SharePointViewer/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>

@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * Created by yuanx on 7/21/2015.
+ * the data adapter for the sharepoint
  */
 public class SharePointDataAdapter extends ArrayAdapter<Sharepoint> implements Filterable{
 
@@ -47,6 +48,8 @@ public class SharePointDataAdapter extends ArrayAdapter<Sharepoint> implements F
         return filter;
     }
 
+    //the filter class enables the searching
+    //use the mList field to keep the origin data
     class MyFilter extends  Filter {
         @Override
         protected android.widget.Filter.FilterResults performFiltering(CharSequence constraint) {
@@ -84,6 +87,7 @@ public class SharePointDataAdapter extends ArrayAdapter<Sharepoint> implements F
         }
     };
 
+    //the helper class of copying the list. note: i thought there was a build in method of ArrayList to make a copy but i didnt find it
     private ArrayList<Sharepoint> copySharepoints(List<Sharepoint> sharepoints){
         ArrayList<Sharepoint> newSharepoints = new ArrayList<>();
         for(Sharepoint sp : sharepoints){

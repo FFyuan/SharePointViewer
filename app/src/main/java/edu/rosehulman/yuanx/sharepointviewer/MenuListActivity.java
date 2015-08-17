@@ -5,6 +5,7 @@ import android.app.ListActivity;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,10 +24,15 @@ import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.json.gson.GsonFactory;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
+import java.util.TimeZone;
 
+//the Menu activity
 public class MenuListActivity extends ListActivity {
 
     private AramarkHelperMenuFetcher mService;
@@ -36,14 +42,21 @@ public class MenuListActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_list);
+        //get the period from intent and set it as title
         this.period = getIntent().getStringExtra(KEY_PERIOD);
         ((TextView)findViewById(R.id.daily_menu_period_title)).setText(this.period);
+        //perpare to connect with the api
         mService = (new AramarkHelperMenuFetcher.Builder(AndroidHttp.newCompatibleTransport(), new GsonFactory(), null)).build();
+        //set the adapter
         MenuListAdapter adapter = new MenuListAdapter(this, new ArrayList<MenuItems>());
         setListAdapter(adapter);
-        (new QueryForPeriod()).execute("2015-08-14");
+        //query for the current date's menu
+        DateFormat df = new SimpleDateFormat(getString(R.string.date_format));
+        String date = df.format(Calendar.getInstance().getTime());
+        (new QueryForPeriod()).execute(date);
     }
 
+    //Find the entityKey of the specific period
     class QueryForPeriod extends AsyncTask<String, Void, PeriodCollection>{
 
         @Override
@@ -66,6 +79,7 @@ public class MenuListActivity extends ListActivity {
                 for(Period period : periodCollection.getItems()){
                     Log.d("SV", "Checking period for " + period.getName() + " " + MenuListActivity.this.period);
                     if(period.getName().equals(MenuListActivity.this.period)){
+                        //find the categories in certain perid
                         Log.w("SV","Now Loading categories");
                         (new QueryForCategories()).execute(period);
                     }
@@ -73,6 +87,7 @@ public class MenuListActivity extends ListActivity {
             }
         }
     }
+    //Find the categories of the specific period
     class QueryForCategories extends AsyncTask<Period, Void, CategoryCollection>{
 
         @Override
@@ -93,10 +108,13 @@ public class MenuListActivity extends ListActivity {
                 Log.d("SV", "Failed loading categories ");
             }else{
                 Log.w("SV", "Now Loading the dishes");
+                //then get all the information of the Menu
                 (new QueryForDishes()).execute(categoryCollection.getItems());
             }
         }
     }
+
+    //take the list of categories as input, request for each of the categories
     class QueryForDishes extends AsyncTask<List<Category>, Void, ArrayList<MenuItems>>{
         @Override
         protected ArrayList<MenuItems> doInBackground(List<Category>... params) {
@@ -106,6 +124,7 @@ public class MenuListActivity extends ListActivity {
                     Log.d("SV", "Searching dishes for " + category.getName());
                     AramarkHelperMenuFetcher.Dish.List query = mService.dish().list(category.getEntityKey());
                     DishCollection dishes = query.execute();
+                    //wrap up in the menuItems object and add to a temp result
                     results.add(new MenuItems(category.getName(), true));
                     for(Dish dish : dishes.getItems()){
                         results.add(new MenuItems(dish.getName(), false));
@@ -124,6 +143,7 @@ public class MenuListActivity extends ListActivity {
                 Log.d("SV", "Failed loading dishes, result is null");
             }else{
                 Log.d("SV", "Success loading dishes.");
+                //add the result to the adapter
                 ((MenuListAdapter)getListAdapter()).addAll(menuItemses);
                 ((MenuListAdapter)getListAdapter()).notifyDataSetChanged();
             }

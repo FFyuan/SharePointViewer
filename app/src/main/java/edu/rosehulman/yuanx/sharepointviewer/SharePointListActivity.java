@@ -30,6 +30,7 @@ import java.util.ArrayList;
 
 /**
  * Created by yuanx on 7/21/2015.
+ * The sharepoint's main activity
  */
 public class SharePointListActivity extends ListActivity implements View.OnClickListener {
 

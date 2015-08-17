@@ -9,6 +9,7 @@ import com.appspot.yuanx_sharepoint_viewer.sharepointviewer.model.Comment;
 
 /**
  * Created by yuanx on 7/26/2015.
+ * The custom class for Comment Row
  */
 public class CommentRowView extends RelativeLayout {
     private TextView mFromUserText;

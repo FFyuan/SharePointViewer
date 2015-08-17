@@ -13,7 +13,7 @@
         android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
         <activity
             android:name=".SharePointListActivity"
-            android:label="@string/app_name" >
+            android:label="@string/title_sharepoint_list_activity" >
         </activity>
         <activity
             android:name=".SelfSharepointListActivity"

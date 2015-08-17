@@ -37,15 +37,16 @@ public class SelfSharepointListActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_sharepoint_self);
-        //setup action bar
-        //getActionBar().setDisplayHomeAsUpEnabled(true);
+        //get the username from intent
         String username = (getIntent().getStringExtra(KEY_USERNAME));
+        //set the title
         ((TextView) findViewById(R.id.self_title)).setText(username + "'s Sharepoints");
+        //request to update the sharepoints
         updateSelfSharepoints();
     }
 
+    //on sharepoint being clicked, create the intent with several extras as shown and fires it to the detail view
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
@@ -60,6 +61,7 @@ public class SelfSharepointListActivity extends ListActivity {
     }
 
 
+    //set the menu appears when long clicked on certain sharepoint
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {
@@ -70,6 +72,7 @@ public class SelfSharepointListActivity extends ListActivity {
         }
     }
 
+    //listen to the delete and edit, show the dialog when needed
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item
@@ -123,10 +126,12 @@ public class SelfSharepointListActivity extends ListActivity {
         return super.onContextItemSelected(item);
     }
 
+    //the helper method of update sharepoints
     private void updateSelfSharepoints() {
         new QueryForSelfSharepoints().execute();
     }
 
+    //Api Request Class
     class QueryForSelfSharepoints extends AsyncTask<Void, Void, SharepointCollection> {
 
         @Override
