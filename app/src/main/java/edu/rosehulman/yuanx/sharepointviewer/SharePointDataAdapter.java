@@ -20,12 +20,12 @@ import java.util.List;
  */
 public class SharePointDataAdapter extends ArrayAdapter<Sharepoint> implements Filterable{
 
-    private ArrayList<Sharepoint> mList;
+    private ArrayList<Sharepoint> origin;
     private Filter filter;
 
     public SharePointDataAdapter(Context context, List<Sharepoint> objects) {
         super(context, android.R.layout.simple_expandable_list_item_2, android.R.id.text1, objects);
-        mList = copySharepoints(objects);
+        origin = copySharepoints(objects);
     }
 
     @Override
@@ -49,19 +49,18 @@ public class SharePointDataAdapter extends ArrayAdapter<Sharepoint> implements F
     }
 
     //the filter class enables the searching
-    //use the mList field to keep the origin data
+    //use the origin field to keep the origin data
     class MyFilter extends  Filter {
         @Override
         protected android.widget.Filter.FilterResults performFiltering(CharSequence constraint) {
             android.widget.Filter.FilterResults results = new android.widget.Filter.FilterResults();
             ArrayList<Sharepoint> filteredArray = new ArrayList<>();
             constraint = constraint.toString().toLowerCase();
-            List<Sharepoint> temp = mList;
-            for(int i=0;i < temp.size(); i++){
-                String title = temp.get(i).getTitle();
-                String detail = temp.get(i).getDetail();
+            for(int i=0;i < origin.size(); i++){
+                String title = origin.get(i).getTitle();
+                String detail = origin.get(i).getDetail();
                 if(title.toLowerCase().contains(constraint.toString()) || detail.toLowerCase().contains(constraint.toString())){
-                    filteredArray.add(temp.get(i));
+                    filteredArray.add(origin.get(i));
                 }
             }
             results.count = filteredArray.size();
@@ -75,10 +74,10 @@ public class SharePointDataAdapter extends ArrayAdapter<Sharepoint> implements F
             clear();
 
             if(constraint == null || constraint == ""){
-                addAll(mList);
+                addAll(origin);
             }else {
                 if(results.values == null){
-                    Log.d(SharePointListActivity.SV, "origin.count = + " + mList.size());
+                    Log.d(SharePointListActivity.SV, "origin.count = + " + origin.size());
                 } else {
                     addAll((List<Sharepoint>) results.values);
                 }
